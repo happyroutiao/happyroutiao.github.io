@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="shortcut icon" type="image/png" href="favicon.png" />
+        <title>快乐的肉条</title>
+        <script>
+
+            function load(i) {
+                if (i === 0 ) {
+                    console.log("加载完成！");
+                }
+                i = i - 1;
+                document.getElementById("progress").value = 100-i;
+                setTimeout("load("+ i +")", 100);         
+            }
+
+/******************************************************************
+            function set(n){
+                document.getElementById("progress").value = n;
+            }
+
+            function load() {
+                for(let i = 0; i <= 100; i++) {
+                    console.log("i = " + i);
+                    setTimeout("set("+i+")" , 500);
+                }
+            }
+********************************************************************/
+        </script>
+    </head>
+
+    <body style="background-color: rgb(50, 148, 205);">
+        <div style="background-color: whitesmoke;">
+            <header role="banner">
+                <h1>
+                    欢迎来到快乐的肉条主页
+                </h1>
+                <nav role="navigation">
+                    <ul>
+                        <li><a href="">首页</a></li>
+                        <li><a href="">关于我</a></li>
+                        <li><a href="">小说</a></li>
+                        <li><a href="">学习</a></li>
+                    </ul>
+                </nav>
+            </header>
+    
+            <main role="main">
+                <section>
+                    <h2>最新文章</h2>
+                    <article>
+                        <ul>
+                            <li>
+                                <progress id="progress" max="100" value="0"></progress>
+                            </li>
+
+                        </ul>
+
+                        <button type="button" onclick="load(100)">start</button>
+                    </article>
+    
+                </section>
+            </main>
+    
+            <aside role="complementary">
+                <h1>作者</h1>
+                <figure>
+                    <figcaption>
+                        <b>快乐的肉条</b>
+                    </figcaption>
+                    <img src="/images/userpic.jpg" width="80" alt="portrait" />
+                </figure>
+                <p><address>可以这样联系我: <a href="mailto:happyroutiao@gmail.com">happyroutiao@gmail.com</a></address></p>
+                <h1>技术支持</h1>
+                <p><a href="https://pages.github.com/"><cite>GitHub Pages</cite></a></p>
+                
+            </aside>
+    
+            <footer>
+                <p><small>&copy;快乐的肉条 happyroutiao@gmail.com</small></p>
+            </footer>
+    
+
+        </div>
+
+    </body>
+
+</html>
